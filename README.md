@@ -17,26 +17,26 @@
 </p>
 
 
-Este projeto proporciona uma solução automatizada e eficaz para compartilhar arquivos de um diretório local com múltiplos hosts de rede, evitando a necessidade de realizar essa tarefa manualmente para cada um deles. Ele utiliza as capacidades assíncronas do Node.js para assegurar um desempenho otimizado ao longo do processo.
+This project provides an efficient, automated solution for sharing files from a local directory to multiple network hosts, avoiding the need to perform this task manually for each of them. It uses the asynchronous capabilities of Node.js to ensure optimized performance throughout the process.
 
-1. **Requisitos**:
+1. **Requirements**:
    - [Node.js](https://nodejs.org/en/)
 
-2. **Configuração**:
-   - Os endereços IPs dos hosts deverão ser listados em `hosts.json`. 
-   - Todos os hosts deverão compartilhar uma pasta em um caminho comum. ex.: `192.168.*.*/share/`
-   - As pastas compartilhadas deverão estar sem senha;
-   - Se não houver conexão entre os hosts: verifique as permissões do firewall.
-   - Certifique-se também de que o dispositivo está visível na rede e o compartilhamento protegido por senha esteja desabilitado.
+2. **Settings**:
+   - The IP addresses of the hosts should be listed in `hosts.json`. 
+   - All hosts should share a folder in a common path. e.g. `192.168.*.*/share/`
+   - Shared folders must not have a password;
+   - If there is no connection between hosts: check firewall permissions.
+   - Also make sure the device is visible on the network and password-protected sharing is disabled.
 ![image](/assets/images/passwordShareDisable.png)
 
-   - Defina o nome da pasta compartilhada em comum em:   `index.ts:Ln 35, Col 65`.
+   - Set the shared folder name in common in: `index.ts:Ln 35, Col 65`.
 
-5. **Execução do Programa**:
-   - Após configurar corretamente, insira os arquivos que deverão ser compartilhados na pasta `filesOnDirect`.
-   - Execute `yarn start` ou `npm start` para iniciar o processo de compartilhamento.
+5. **Program Execution**:
+   - Once configured correctly, insert the files that should be shared into the `filesOnDirect` folder.
+   - Run `yarn start` or `npm start` to start the sharing process.
 
-6. **Saída**:
-   - Será emitido um log a cada evento do processo, como análise dos arquivos, cópia concluída, erro no processo, etc.  
+6. **Output**:
+   - A log will be issued for each process event, such as file analysis, copy completion, process error, etc. 
 
 
